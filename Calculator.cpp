@@ -2,11 +2,11 @@
 
 #define DARKMODE false
 
-const uint8_t BATTERY_SEGMENT_WIDTH = 7; //7
-const uint8_t BATTERY_SEGMENT_HEIGHT = 9; //11
+const uint8_t BATTERY_SEGMENT_WIDTH = 7;
+const uint8_t BATTERY_SEGMENT_HEIGHT = 9;
 const uint8_t BATTERY_SEGMENT_SPACING = 9;
-const uint8_t BATTERYX = 173; //173
-const uint8_t BATTERYY = 10; //7
+const uint8_t BATTERYX = 173;
+const uint8_t BATTERYY = 10;
 const uint8_t WEATHER_ICON_WIDTH = 48;
 const uint8_t WEATHER_ICON_HEIGHT = 32;
 const uint8_t TEMPX = 110;
@@ -17,9 +17,9 @@ const uint8_t BUTTONH = 25;
 const uint8_t BUTTONW = 45;
 const uint8_t TEXTOFFSET = 18;
 const uint8_t TIMEX = 90;
-const uint8_t TIMEY = 62; //52
-const uint8_t DOWX = 3; //72
-const uint8_t DOWY = 80; //75
+const uint8_t TIMEY = 62;
+const uint8_t DOWX = 10;
+const uint8_t DOWY = 80;
 const uint8_t MONTHX = 100;
 const uint8_t YEARX = 155;
 const uint8_t STEPSX = 3;
@@ -36,7 +36,7 @@ void Calculator::drawBackground() {
     int r = ROW;
     for (int y = 0; y < 4; y = y + 1) {
         for (int i = 2; i < 200; i = i + 50) {
-            display.fillRect(i, r, BUTTONW, BUTTONH, DARKMODE ? GxEPD_WHITE : GxEPD_BLACK);
+            display.fillRoundRect(i, r, BUTTONW, BUTTONH, 7, DARKMODE ? GxEPD_WHITE : GxEPD_BLACK);
         }
         r = r + ROWGAP + BUTTONH;
     }
